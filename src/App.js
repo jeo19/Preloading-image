@@ -1,25 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import IronImage from "./IronImage";
+import "./App.css";
+import smallImage from "./preloading.jpg";
+const hdImage = "https://images.unsplash.com/photo-1478562853135-c3c9e3ef7905";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <IronImage srcPreload={smallImage} srcLoaded={hdImage} />
       </div>
     );
   }
