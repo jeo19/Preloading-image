@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.app {
+  position: relative;
+
+  height: 800px;
+  margin-top: 10px;
+}
+
+.app-iron-image-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  overflow: hidden;
+
+  animation-name: raiseCard;
+  animation-duration: 0.3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.solitude__image-container {
+  position: relative;
+  z-index: 2;
+
+  flex: 1 100%;
+  justify-content: center;
+  opacity: 0;
+
+  animation: 0.5s ease-out forwards showImage;
+  animation-delay: 1.5s;
+}
+@keyframes raiseCard {
+  to {
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes showImage {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textSlideIn {
+  to {
+    transform: translateX(0);
+  }
+}
